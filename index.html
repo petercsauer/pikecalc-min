@@ -520,7 +520,16 @@
 	</div>
 </section>
 <!--================End Made Life Area =================-->
-
+<section class="" style="background-color:#333333; padding-top:30px; padding-bottom:20px;">
+	<div class="container" style="background-color:#333333;">
+		<div class="input-group mb-3">
+			<input type="text" class="form-control" placeholder="Number of Decimal Points" aria-label="Recipient's username" aria-describedby="button-addon2" id="dec_new">
+			<div class="input-group-append">
+				<button class="btn btn-primary" type="button" id="update_dec">Update</button>
+			</div>
+		</div>
+	</div>
+</section>
 
 <!--================Footer Area =================-->
 <footer class="footer_area p_120">
@@ -578,22 +587,27 @@
 
 
 <script>
+
+	$('#update_dec').click(function() {
+		roundNum=$('#dec_new').val();
+	});
+
 	$('#submit-conv').click(function(){
 		if($('#micron-wave').val()!="") {
 			var calc1 = (10000 / $('#micron-wave').val());
-			$('#wave1').html(calc1);
+			$('#wave1').html(calc1.toFixed(roundNum));
 		}
 		if($('#nano-wave').val()!="") {
 			var calc2 = (10000000 / $('#nano-wave').val());
-			$('#wave2').html(calc2);
+			$('#wave2').html(calc2.toFixed(roundNum));
 		}
 		if($('#wave-wave').val()!="") {
 			var calc3 = (1 / $('#wave-wave').val());
 			var calc4 = (10000000 / $('#wave-wave').val());
 			var calc5 = (10000 / $('#wave-wave').val());
-			$('#wave3').html(calc3);
-			$('#nano').html(calc4);
-			$('#micron').html(calc5);
+			$('#wave3').html(calc3.toFixed(roundNum));
+			$('#nano').html(calc4.toFixed(roundNum));
+			$('#micron').html(calc5.toFixed(roundNum));
 		}
 	});
 
@@ -605,7 +619,7 @@
 		$('#depth').html(calc6.toFixed(roundNum));
 		var d1 =  ($('#wavenumber1').val()/$('#material1').val())*($('#material1').val()*$('#material1').val()*$('#ref-index-1').val())*Math.cos($('#eff-ang-1').val()*Math.PI/180)/((Math.pow($('#material1').val(),2)-Math.pow($('#ref-index-1').val(),2))*Math.PI*Math.sqrt(Math.pow($('#material1').val(),2)*Math.pow(Math.sin($('#eff-ang-1').val()*Math.PI/180),2)-Math.pow($('#ref-index-1').val(),2)));
 		var d2 = d1*(2*Math.pow($('#material1').val(),2)*Math.pow(Math.sin($('#eff-ang-1').val()*Math.PI/180),2)-Math.pow($('#ref-index-1').val(),2))/((Math.pow($('#material1').val(),2)+(Math.pow($('#ref-index-1').val(),2))*Math.pow(Math.sin($('#eff-ang-1').val()*Math.PI/180),2)-Math.pow($('#ref-index-1').val(),2)));
-		$('#ef-depth').html(((d1+d2)/200).toFixed(2));
+		$('#ef-depth').html(((d1+d2)/200).toFixed(roundNum));
 	});
 
 
@@ -616,33 +630,33 @@
 	});
 	$('#submit-ref').click(function() {
 		var calc9 = Math.floor($('#crys-len-3').val()/(2*$('#crys-thick-3').val()*Math.tan($('#eff-ang-3').val()*Math.PI/180)));
-		$('#num-ref').html(calc9);
+		$('#num-ref').html(calc9.toFixed(roundNum));
 	});
 
 	$('#submit-path').click(function() {
 		var calc10 = $('#num-ref-4').val()*$('#eff-depth-4').val();
-		$('#eff-path').html(calc10);
+		$('#eff-path').html(calc10.toFixed(roundNum));
 	});
 
 	$('#submit-crit').click(function() {
 		var calc10 = 180/Math.PI*Math.asin(parseFloat($('#ref-index-5').val()/$('#material-5').val()));
 		console.log($('#ref-index-5').val()/$('#material-5').val());
-		$('#crit-ang').html(calc10);
+		$('#crit-ang').html(calc10.toFixed(roundNum));
 	});
 
 	$('#submit-thick-7').click(function() {
 		var calc11 = 10*$('#fringe-7').val()/(2*Math.abs($('#wave-1-7').val()-$('#wave-2-7').val()));
-		$('#thick-7').html(calc11);
+		$('#thick-7').html(calc11.toFixed(roundNum));
 	});
 
 	$('#submit-thick-8').click(function() {
 		var calc11 = 10000*$('#fringe-7').val()/(2*Math.abs($('#wave-1-7').val()-$('#wave-2-7').val())*Math.sqrt(Math.pow($('#ref-ind-8').val(),2)-Math.pow(Math.sin($('#angle-inc-8').val()*Math.PI/180),2)));
-		$('#thick-8').html(calc11);
+		$('#thick-8').html(calc11.toFixed(roundNum));
 	});
 
 	$('#submit-thick-9').click(function() {
 		var calc11 = 10000*$('#fringe-7').val()/(2*$('#ref-ind-9').val()*Math.abs($('#wave-1-7').val()-$('#wave-2-7').val()));
-		$('#thick-9').html(calc11);
+		$('#thick-9').html(calc11.toFixed(roundNum));
 	});
 
 	$(function () {
