@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="img/favicon.png" type="image/png">
+	<title>PIKECalc</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="vendors/linericon/style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
+	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+	<link rel="stylesheet" href="vendors/animate-css/animate.css">
+	<link rel="stylesheet" href="vendors/flaticon/flaticon.css">
+	<!-- main css -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+
+</head>
+<body>
+
+<!--================Header Menu Area =================-->
+<header class="header_area">
+	<div class="main_menu">
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<div class="container box_1620">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt="" style="height:70px;"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+
+			</div>
+		</nav>
+	</div>
+</header>
+<!--================Header Menu Area =================-->
+
+<!--================Home Banner Area =================-->
+<section class="home_banner_area">
+	<div class="banner_inner">
+		<div class="container">
+			<div class="row" >
+				<div class="col-lg-12">
+					<div class="banner_content" style="margin-top:100px;margin-bottom:100px;">
+						<h2>PIKE Technologies <br />FT-IR Calculator</h2>
+						<p>PIKECalc software is easy to use – just select the type of computation,
+							enter values from your spectral data and click on the calculate
+							button. An instant calculation is performed.
+							PIKECalc eliminates the need to search through literature
+							references to find the correct conversions and formulae and gives
+							you immediate results. All formulae and equations are documented
+							in the software, if you wish to reference our mathematics. Help
+							and how to use PIKECalc is included within the software.
+							Please ask us about other FTIR spectroscopy calculations you
+							may need.</p>
+						<a class="banner_btn" href="#">Get Started</a>
+						<a class="banner_btn2" href="http://www.piketech.com">PIKE Website</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+<!--================End Home Banner Area =================-->
+
+<!--================Made Life Area =================-->
+<section class="made_life_area p_120">
+	<div class="container">
+		<div class="made_life_inner">
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item">
+					<a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Unit Conversion</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">ATR Calculation</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Thickness Calculation</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="edge-tab" data-toggle="tab" href="#edge" role="tab" aria-controls="edge" aria-selected="false">Crystal Properties</a>
+				</li>
+			</ul>
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+					<div class="row made_life_text">
+						<div class="col-lg-4">
+							<div class="card">
+								<h5 class="card-header">Micron to Wave Number</h5>
+								<div class="card-body">
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder="Micron" aria-describedby="basic-addon2" id="micron-wave">
+									</div>
+									<hr>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="wave1" style="background-color:white;">0</span>
+										</div>
+										<div class="input-group-append">
+											<span class="input-group-text" >Wavenumbers</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="card">
+								<h5 class="card-header">Nanometer to Wave Number</h5>
+								<div class="card-body">
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder="Nanometer" aria-describedby="basic-addon2" id="nano-wave">
+									</div>
+									<hr>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="wave2" style="background-color:white;">0</span>
+										</div>
+										<div class="input-group-append">
+											<span class="input-group-text" >Wavenumbers</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="card">
+								<h5 class="card-header">Wavenumber to Wavelength</h5>
+								<div class="card-body">
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder="Wavenumber"  aria-describedby="wave-wave" id="wave-wave">
+									</div>
+									<hr>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="wave3" style="background-color:white;">0</span>
+										</div>
+										<div class="input-group-append">
+											<span class="input-group-text" >Wavelengths</span>
+										</div>
+									</div>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="micron" style="background-color:white;">0</span>
+										</div>
+										<div class="input-group-append">
+											<span class="input-group-text" >Microns</span>
+										</div>
+									</div>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="nano" style="background-color:white;">0</span>
+										</div>
+										<div class="input-group-append">
+											<span class="input-group-text" >Nanometers</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br>
+					<a class="main_btn"  style="width:100%;color:whitesmoke;" id="submit-conv">Calculate All</a>
+
+				</div>
+				<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="card">
+								<h5 class="card-header">Depth of Penetration</h5>
+								<div class="card-body">
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder="Effective Angle (°)"  id="eff-ang-1" aria-describedby="basic-addon2">
+										<input type="text" class="form-control" placeholder="Wavenumber" id="wavenumber1" aria-describedby="basic-addon2">
+
+									</div>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text"  >Material</span>
+										</div>
+										<select class="browser-default custom-select" id="material1">
+											<option value="4">Ge (4)</option>
+											<option value="3.4">Si (3.4)</option>
+											<option value="2.5">AMTIR (2.5)</option>
+											<option value="2.4">Diamond (2.4)</option>
+											<option value="2.4">ZnSe (2.4)</option>
+											<option value="2.2">KRS-5 (2.2)</option>
+											<option value="1.74">Sapphire (1.74)</option>
+											<option value="1.52">KBr (1.52)</option>
+											<option value="1.49">NaCl (1.49)</option>
+											<option value="1.42">BaF (1.42)</option>
+											<option value="1.39">CaF2 (1.39)</option>
+										</select>
+									</div>
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder="Sample Refractive Index" id="ref-index-1" aria-describedby="basic-addon2">
+									</div>
+									<hr>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="depth" style="background-color:white;">0</span>
+										</div>
+										<div class="input-group-append">
+											<span class="input-group-text" >Depth (d<sub style="color:#495057;">p</sub>, μ)</span>
+										</div>
+									</div>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="ef-depth" style="background-color:white;">0</span>
+										</div>
+										<div class="input-group-append">
+											<span class="input-group-text" >Effective Depth (d<sub style="color:#495057;">e</sub>, μ)</span>
+										</div>
+									</div>
+									<a class="main_btn"  style="width:100%; color:whitesmoke;" id="submit-depth">Calculate Depth</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="card">
+								<h5 class="card-header">Effective Angle of Incidence for Variable Angle ATRs</h5>
+								<div class="card-body">
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder="Scale Setting Angle (°)" id="scale-angle-2" aria-describedby="basic-addon2">
+									</div>
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder="Crystal Face Angle (°)" id="face-angle-2" aria-describedby="basic-addon2">
+									</div>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" >Material</span>
+										</div>
+										<select class="browser-default custom-select" id="material-2">
+											<option value="4">Ge (4)</option>
+											<option value="3.4">Si (3.4)</option>
+											<option value="2.5">AMTIR (2.5)</option>
+											<option value="2.4">Diamond (2.4)</option>
+											<option value="2.4">ZnSe (2.4)</option>
+											<option value="2.2">KRS-5 (2.2)</option>
+											<option value="1.74">Sapphire (1.74)</option>
+											<option value="1.52">KBr (1.52)</option>
+											<option value="1.49">NaCl (1.49)</option>
+											<option value="1.42">BaF (1.42)</option>
+											<option value="1.39">CaF2 (1.39)</option>
+										</select>
+									</div>
+									<hr>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="eff-ang" style="background-color:white;">0</span>
+										</div>
+										<div class="input-group-append">
+											<span class="input-group-text" >Effective Angle (°)</span>
+										</div>
+									</div>
+									<a class="main_btn"  style="width:100%;color:whitesmoke;" id="submit-angle-2">Calculate Angle</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="card">
+								<h5 class="card-header">Number of Reflections for ATR Crystals</h5>
+								<div class="card-body">
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder="Effective Angle (°)" id="eff-ang-3"  aria-describedby="basic-addon2">
+									</div>
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder="Crystal Length (mm)" id="crys-len-3" aria-describedby="basic-addon2">
+									</div>
+
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder="Crystal Thickness (mm)" id="crys-thick-3" aria-describedby="basic-addon2">
+									</div>
+									<hr>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="num-ref" style="background-color:white;">0</span>
+										</div>
+										<div class="input-group-append">
+											<span class="input-group-text" >Number of Reflections</span>
+										</div>
+									</div>
+									<a class="main_btn"  style="width:100%;color:whitesmoke;" id="submit-ref">Calculate Reflections</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="card">
+								<h5 class="card-header">Effective Pathlength for ATR Crystals</h5>
+								<div class="card-body">
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder="Number of Reflections" id="num-ref-4"  aria-describedby="basic-addon2">
+									</div>
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder="Effective Depth (μ)" id="eff-depth-4" aria-describedby="basic-addon2">
+									</div>
+									<hr>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="eff-path" style="background-color:white;">0</span>
+										</div>
+										<div class="input-group-append">
+											<span class="input-group-text" >Pathlength (μ)</span>
+										</div>
+									</div>
+									<a class="main_btn"  style="width:100%;color:whitesmoke;" id="submit-path">Calculate Pathlength</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="card">
+								<h5 class="card-header">Critical Angle</h5>
+								<div class="card-body">
+
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder="Sample Refractive Index"  id="ref-index-5" aria-describedby="basic-addon2">
+									</div>
+
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text"  >Material</span>
+										</div>
+										<select class="browser-default custom-select" id="material-5">
+											<option value="4">Ge (4)</option>
+											<option value="3.4">Si (3.4)</option>
+											<option value="2.5">AMTIR (2.5)</option>
+											<option value="2.4">Diamond (2.4)</option>
+											<option value="2.4">ZnSe (2.4)</option>
+											<option value="2.2">KRS-5 (2.2)</option>
+											<option value="1.74">Sapphire (1.74)</option>
+											<option value="1.52">KBr (1.52)</option>
+											<option value="1.49">NaCl (1.49)</option>
+											<option value="1.42">BaF (1.42)</option>
+											<option value="1.39">CaF2 (1.39)</option>
+										</select>
+									</div>
+									<hr>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="crit-ang" style="background-color:white;">0</span>
+										</div>
+										<div class="input-group-append">
+											<span class="input-group-text" >Critical Angle</span>
+										</div>
+									</div>
+									<a class="main_btn"  style="width:100%;color:whitesmoke;" id="submit-crit">Calculate Angle</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade show active" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="card">
+								<h5 class="card-header">Pathlength of Transmission Liquid Cell</h5>
+								<div class="card-body">
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder="Wavenumber Pt 1"  id="wave-1-7" aria-describedby="basic-addon2">
+										<input type="text" class="form-control" placeholder="Wavenumber Pt 2" id="wave-2-7" aria-describedby="basic-addon2">
+
+									</div>
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder="# of fringes between 1 and 2" id="fringe-7" aria-describedby="basic-addon2">
+									</div>
+									<hr>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="thick-7" style="background-color:white;">0</span>
+										</div>
+										<div class="input-group-append">
+											<span class="input-group-text" >Thickness (mm)</span>
+										</div>
+									</div>
+
+									<a class="main_btn"  style="width:100%; color:whitesmoke;" id="submit-thick-7">Calculate Depth</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="card">
+								<h5 class="card-header">Thickness of Free Standing Film by Specular Reflectance</h5>
+								<div class="card-body">
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder="Wavenumber Pt 1"  id="wave-1-8" aria-describedby="basic-addon2">
+										<input type="text" class="form-control" placeholder="Wavenumber Pt 2" id="wave-2-8" aria-describedby="basic-addon2">
+
+									</div>
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder="# of fringes between 1 and 2" id="fringe-8" aria-describedby="basic-addon2">
+									</div>
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder="Angle of Incidence (°)" id="angle-inc-8" aria-describedby="basic-addon2">
+									</div>
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder="Refractive Index of Sample" id="ref-ind-8" aria-describedby="basic-addon2">
+									</div>
+									<hr>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="thick-8" style="background-color:white;">0</span>
+										</div>
+										<div class="input-group-append">
+											<span class="input-group-text" >Thickness (μ)</span>
+										</div>
+									</div>
+
+									<a class="main_btn"  style="width:100%; color:whitesmoke;" id="submit-thick-8">Calculate Depth</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="card">
+								<h5 class="card-header">Thickness of Free Standing Film by Transmission</h5>
+								<div class="card-body">
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder="Wavenumber Pt 1"  id="wave-1-9" aria-describedby="basic-addon2">
+										<input type="text" class="form-control" placeholder="Wavenumber Pt 2" id="wave-2-9" aria-describedby="basic-addon2">
+
+									</div>
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder="# of fringes between 1 and 2" id="fringe-9" aria-describedby="basic-addon2">
+									</div>
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder="Refractive Index of Sample" id="ref-ind-9" aria-describedby="basic-addon2">
+									</div>
+									<hr>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="thick-9" style="background-color:white;">0</span>
+										</div>
+										<div class="input-group-append">
+											<span class="input-group-text" >Thickness (μ)</span>
+										</div>
+									</div>
+
+									<a class="main_btn"  style="width:100%; color:whitesmoke;" id="submit-thick-9">Calculate Depth</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="edge" role="tabpanel" aria-labelledby="edge-tab">
+					<div class="row">
+						<div class="col-3">
+							<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+								<a class="nav-link active" id="v-pills-AMTIR-tab" data-toggle="pill" href="#v-pills-AMTIR" role="tab" aria-controls="v-pills-home" aria-selected="true">AMTIR</a>
+								<a class="nav-link" id="v-pills-BaF2-tab" data-toggle="pill" href="#v-pills-BaF2" role="tab" aria-controls="v-pills-profile" aria-selected="false">BaF2</a>
+								<a class="nav-link" id="v-pills-CaF2-tab" data-toggle="pill" href="#v-pills-CaF2" role="tab" aria-controls="v-pills-messages" aria-selected="false">CaF2</a>
+								<a class="nav-link" id="v-pills-Diamond-tab" data-toggle="pill" href="#v-pills-Diamond" role="tab" aria-controls="v-pills-settings" aria-selected="false">Diamond</a>
+								<a class="nav-link " id="v-pills-Ge-tab" data-toggle="pill" href="#v-pills-Ge" role="tab" aria-controls="v-pills-home" aria-selected="false">Ge</a>
+								<a class="nav-link" id="v-pills-Kbr-tab" data-toggle="pill" href="#v-pills-KBr" role="tab" aria-controls="v-pills-profile" aria-selected="false">KBr</a>
+								<a class="nav-link" id="v-pills-KRS-tab" data-toggle="pill" href="#v-pills-KRS-5" role="tab" aria-controls="v-pills-messages" aria-selected="false">KRS-5</a>
+								<a class="nav-link" id="v-pills-NaCl-tab" data-toggle="pill" href="#v-pills-NaCl" role="tab" aria-controls="v-pills-settings" aria-selected="false">NaCl</a>
+								<a class="nav-link " id="v-pills-Sapph-tab" data-toggle="pill" href="#v-pills-Sapphire" role="tab" aria-controls="v-pills-home" aria-selected="false">Sapphire</a>
+								<a class="nav-link" id="v-pills-Si-tab" data-toggle="pill" href="#v-pills-Si" role="tab" aria-controls="v-pills-profile" aria-selected="false">Si</a>
+								<a class="nav-link" id="v-pills-ZnS-tab" data-toggle="pill" href="#v-pills-ZnS" role="tab" aria-controls="v-pills-messages" aria-selected="false">Zns</a>
+								<a class="nav-link" id="v-pills-ZnSe-tab" data-toggle="pill" href="#v-pills-ZnSe" role="tab" aria-controls="v-pills-settings" aria-selected="false">ZnSe</a>
+							</div>
+						</div>
+						<div class="col-9">
+							<div class="tab-content" id="v-pills-tabContent">
+								<div class="copy">
+								<div class="tab-pane fade show " id="v-pills-template" role="tabpanel" aria-labelledby="v-pills-home-tab">
+									<div class="card">
+										<h5 class="card-header name"></h5>
+										<div class="card-body">
+											<button type="button" class="btn" style="margin:5px;">
+												Transmission Range <span class="badge badge-light trans-range"></span>
+											</button>
+											<button type="button" class="btn" style="margin:5px;">
+												ATR Range <span class="badge badge-light atr-range"></span>
+											</button>
+											<button type="button" class="btn" style="margin:5px;">
+												Refractive Index <span class="badge badge-light ref-index"></span>
+											</button>
+											<button type="button" class="btn" style="margin:5px;">
+												Depth of Penetration <span class="badge badge-light depth-pen"></span>
+											</button>
+											<button type="button" class="btn" style="margin:5px;">
+												Water Solubility <span class="badge badge-light water"></span>
+											</button>
+											<button type="button" class="btn" style="margin:5px;">
+												Safe pH Range <span class="badge badge-light ph"></span>
+											</button>
+											<button type="button" class="btn" style="margin:5px;">
+												Temperature Limit <span class="badge badge-light temp"></span>
+											</button>
+											<button type="button" class="btn" style="margin:5px;">
+												Melting Point <span class="badge badge-light melt"></span>
+											</button>
+											<button type="button" class="btn" style="margin:5px;">
+												Hardness <span class="badge badge-light hardness"></span>
+											</button>
+											<button type="button" class="btn" style="margin:5px;">
+												Harmful Substances <span class="badge badge-light harmful"></span>
+											</button>
+										</div>
+									</div>
+								</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--================End Made Life Area =================-->
+
+
+<!--================Footer Area =================-->
+<footer class="footer_area p_120">
+	<div class="container">
+		<div class="row footer_inner">
+			<div class="col-lg-10 col-sm-6">
+				<aside class="f_widget ab_widget">
+					<div class="f_title">
+						<h3>About PIKE</h3>
+					</div>
+					<p>PIKE Technologies was established in 1989 by Phil and Irene Brierley with the goal of creating a unique enterprise specializing in the imaginative design and creation of high quality custom spectroscopic accessories; thus the tag line “Spectroscopic Creativity”. They founded PIKE on the principle of making the life of the spectroscopist easier through replacing traditional, tedious sampling routines with a range of innovative products and techniques ... and all at an outstanding value!</p>
+				</aside>
+			</div>
+
+			<div class="col-lg-2">
+				<aside class="f_widget social_widget">
+					<div class="f_title">
+						<h3>Follow Me</h3>
+					</div>
+					<p>Let us be social</p>
+					<ul class="list">
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+						<li><a href="#"><i class="fa fa-behance"></i></a></li>
+					</ul>
+				</aside>
+			</div>
+		</div>
+	</div>
+</footer>
+<!--================End Footer Area =================-->
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/stellar.js"></script>
+<script src="vendors/lightbox/simpleLightbox.min.js"></script>
+<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+<script src="vendors/isotope/isotope-min.js"></script>
+<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+<script src="vendors/counter-up/jquery.counterup.min.js"></script>
+<script src="js/mail-script.js"></script>
+<!--gmaps Js-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+<script src="js/gmaps.min.js"></script>
+<script src="js/theme.js"></script>
+
+
+<script>
+	$('#submit-conv').click(function(){
+		if($('#micron-wave').val()!="") {
+			var calc1 = (10000 / $('#micron-wave').val());
+			$('#wave1').html(calc1);
+		}
+		if($('#nano-wave').val()!="") {
+			var calc2 = (10000000 / $('#nano-wave').val());
+			$('#wave2').html(calc2);
+		}
+		if($('#wave-wave').val()!="") {
+			var calc3 = (1 / $('#wave-wave').val());
+			var calc4 = (10000000 / $('#wave-wave').val());
+			var calc5 = (10000 / $('#wave-wave').val());
+			$('#wave3').html(calc3);
+			$('#nano').html(calc4);
+			$('#micron').html(calc5);
+		}
+	});
+
+	var roundNum=4;
+
+	$('#submit-depth').click(function() {
+		var calc6 =  ($('#wavenumber1').val())/(2*Math.PI*Math.sqrt(Math.pow($('#material1').val(),2)*Math.pow(Math.sin($('#eff-ang-1').val()*Math.PI/180),2)-Math.pow($('#ref-index-1').val(),2)))/100;
+		console.log();
+		$('#depth').html(calc6.toFixed(roundNum));
+		var d1 =  ($('#wavenumber1').val()/$('#material1').val())*($('#material1').val()*$('#material1').val()*$('#ref-index-1').val())*Math.cos($('#eff-ang-1').val()*Math.PI/180)/((Math.pow($('#material1').val(),2)-Math.pow($('#ref-index-1').val(),2))*Math.PI*Math.sqrt(Math.pow($('#material1').val(),2)*Math.pow(Math.sin($('#eff-ang-1').val()*Math.PI/180),2)-Math.pow($('#ref-index-1').val(),2)));
+		var d2 = d1*(2*Math.pow($('#material1').val(),2)*Math.pow(Math.sin($('#eff-ang-1').val()*Math.PI/180),2)-Math.pow($('#ref-index-1').val(),2))/((Math.pow($('#material1').val(),2)+(Math.pow($('#ref-index-1').val(),2))*Math.pow(Math.sin($('#eff-ang-1').val()*Math.PI/180),2)-Math.pow($('#ref-index-1').val(),2)));
+		$('#ef-depth').html(((d1+d2)/200).toFixed(2));
+	});
+
+
+	$('#submit-angle-2').click(function() {
+		var calc8 = (180/Math.PI*Math.asin(Math.sin(($('#scale-angle-2').val() - $('#face-angle-2').val())*Math.PI/180) / $('#material-2').val()));
+		$('#eff-ang').html((parseFloat($('#face-angle-2').val())+calc8).toFixed(roundNum));
+
+	});
+	$('#submit-ref').click(function() {
+		var calc9 = Math.floor($('#crys-len-3').val()/(2*$('#crys-thick-3').val()*Math.tan($('#eff-ang-3').val()*Math.PI/180)));
+		$('#num-ref').html(calc9);
+	});
+
+	$('#submit-path').click(function() {
+		var calc10 = $('#num-ref-4').val()*$('#eff-depth-4').val();
+		$('#eff-path').html(calc10);
+	});
+
+	$('#submit-crit').click(function() {
+		var calc10 = 180/Math.PI*Math.asin(parseFloat($('#ref-index-5').val()/$('#material-5').val()));
+		console.log($('#ref-index-5').val()/$('#material-5').val());
+		$('#crit-ang').html(calc10);
+	});
+
+	$('#submit-thick-7').click(function() {
+		var calc11 = 10*$('#fringe-7').val()/(2*Math.abs($('#wave-1-7').val()-$('#wave-2-7').val()));
+		$('#thick-7').html(calc11);
+	});
+
+	$('#submit-thick-8').click(function() {
+		var calc11 = 10000*$('#fringe-7').val()/(2*Math.abs($('#wave-1-7').val()-$('#wave-2-7').val())*Math.sqrt(Math.pow($('#ref-ind-8').val(),2)-Math.pow(Math.sin($('#angle-inc-8').val()*Math.PI/180),2)));
+		$('#thick-8').html(calc11);
+	});
+
+	$('#submit-thick-9').click(function() {
+		var calc11 = 10000*$('#fringe-7').val()/(2*$('#ref-ind-9').val()*Math.abs($('#wave-1-7').val()-$('#wave-2-7').val()));
+		$('#thick-9').html(calc11);
+	});
+
+	$(function () {
+		json = {
+			"materials" : [
+				{
+					"name":"AMTIR",
+					"trans_range":"11000-593",
+					"atr_range":"11000-650",
+					"ref_index":"2.5",
+					"depth-pen":"1.7",
+					"water":"Insoluble",
+					"ph":"1-9",
+					"temp":"300",
+					"melting":"370",
+					"hardness":"170",
+					"harmful":"Alkalies"
+				},
+				{
+					"name":"BaF2",
+					"trans_range":"66600-691",
+					"atr_range":"N/A",
+					"ref_index":"1.45",
+					"depth_pen":"N/A",
+					"water":"0.16",
+					"ph":"5-8",
+					"temp":"500",
+					"melting":"1280",
+					"hardness":"82",
+					"harmful":"NH4, Salts, Acids and EDTA"
+				},
+				{
+					"name":"CaF2",
+					"trans_range":"79500-896",
+					"atr_range":"N/A",
+					"ref_index":"1.4",
+					"depth_pen":"N/A",
+					"water":"0.0015",
+					"ph":"5-8",
+					"temp":"600",
+					"melting":"1360",
+					"hardness":"158",
+					"harmful":"NH4, Salts, Acids, Hydroxides and EDTA"
+				},
+				{
+					"name":"Diamond",
+					"trans_range":"30000-<2",
+					"atr_range":"30000-50",
+					"ref_index":"2.4",
+					"depth_pen":"2.0",
+					"water":"Insoluble",
+					"ph":"1-14",
+					"temp":"550",
+					"melting":"3567",
+					"hardness":"8820",
+					"harmful":"K2Cr2O7, conc. H2SO4"
+				},
+				{
+					"name":"Ge",
+					"trans_range":"5500-432",
+					"atr_range":"5500-780",
+					"ref_index":"4.0",
+					"depth_pen":"0.66",
+					"water":"Insoluble",
+					"ph":"1-14",
+					"temp":"190",
+					"melting":"936",
+					"hardness":"780",
+					"harmful":"Hot H2SO4, Agqua Regia"
+				},
+				{
+					"name":"KBr",
+					"trans_range":"48800-345",
+					"atr_range":"N/A",
+					"ref_index":"1.54",
+					"depth_pen":"N/A",
+					"water":"39.5",
+					"ph":"N/A",
+					"temp":"300",
+					"melting":"730",
+					"hardness":"7",
+					"harmful":"Water, Lower Alcohols, \"Wet Solvents\""
+				},
+				{
+					"name":"KRS-5",
+					"trans_range":"17900-204",
+					"atr_range":"17900-250",
+					"ref_index":"2.38",
+					"depth_pen":"2.09",
+					"water":"0.05",
+					"ph":"5-8",
+					"temp":"200",
+					"melting":"414",
+					"hardness":"40",
+					"harmful":"Complexing Agents, Slightly Water Soluble"
+				},
+				{
+					"name":"NaCl",
+					"trans_range":"52600-457",
+					"atr_range":"N/A",
+					"ref_index":"1.52",
+					"depth_pen":"N/A",
+					"water":"26.5",
+					"ph":"N/A",
+					"temp":"400",
+					"melting":"801",
+					"hardness":"18",
+					"harmful":"Water, Lower Alcohols, \"Wet Solvents\""
+				},
+				{
+					"name":"Sapphire",
+					"trans_range":"40000-1608",
+					"atr_range":"N/A",
+					"ref_index":"1.62",
+					"depth_pen":"N/A",
+					"water":"Insoluble",
+					"ph":"1-14",
+					"temp":"1700",
+					"melting":"2040",
+					"hardness":"1370",
+					"harmful":"Chemically Inert"
+				},
+				{
+					"name":"Si",
+					"trans_range":"8900-624",
+					"atr_range":"8900-1460",
+					"ref_index":"3.4",
+					"depth_pen":"0.85",
+					"water":"Insoluble",
+					"ph":"1-12",
+					"temp":"300",
+					"melting":"1420",
+					"hardness":"1150",
+					"harmful":"HF+HNO3"
+				},
+				{
+					"name":"ZnS",
+					"trans_range":"17000-690",
+					"atr_range":"17000-850",
+					"ref_index":"2.2",
+					"depth_pen":"3.86",
+					"water":"Insoluble",
+					"ph":"5-9",
+					"temp":"300",
+					"melting":"1830",
+					"hardness":"160",
+					"harmful":"Acids, Alkalies"
+				}
+			]
+		};
+
+		$.each(json.materials, function () {
+
+			var newApplicant = $("body").find(".copy > div").clone();
+
+			newApplicant.find(".name").append(this.name);
+			newApplicant.find(".trans-range").append(this.trans_range);
+			newApplicant.find(".atr-range").append(this.atr_range);
+			newApplicant.find(".ref-index").append(this.ref_index);
+			newApplicant.find(".depth-pen").append(this.depth_pen);
+			newApplicant.find(".water").append(this.water);
+			newApplicant.find(".ph").append(this.ph);
+			newApplicant.find(".temp").append(this.temp);
+			newApplicant.find(".melt").append(this.melting);
+			newApplicant.find(".hardness").append(this.hardness);
+			newApplicant.find(".harmful").append(this.harmful);
+			newApplicant.attr("id","v-pills-"+this.name);
+
+			$(newApplicant).prependTo("#v-pills-tabContent");
+			$('#v-pills-template').removeClass('show');
+			$('#v-pills-AMTIR').addClass('show active');
+
+
+		});
+	});
+
+
+</script>
+</body>
+</html>
