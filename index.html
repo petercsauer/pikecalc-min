@@ -77,28 +77,31 @@
 		<div class="made_life_inner">
 			<ul class="nav nav-tabs" id="myTab" role="tablist">
 				<li class="nav-item">
-					<a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Unit Conversion</a>
+					<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Unit Conversion</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">ATR Calculation</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link active" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Thickness Calculation</a>
+					<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Thickness Calculation</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" id="edge-tab" data-toggle="tab" href="#edge" role="tab" aria-controls="edge" aria-selected="false">Crystal Properties</a>
 				</li>
 			</ul>
 			<div class="tab-content" id="myTabContent">
-				<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+				<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
 					<div class="row made_life_text">
 						<div class="col-lg-4">
 							<div class="card">
-								<h5 class="card-header">Micron to Wave Number</h5>
+								<h5 class="card-header">Micron to Wavenumber</h5>
 								<div class="card-body">
 									<div class="input-group mb-3">
-										<input type="text" class="form-control" placeholder="Micron" aria-describedby="basic-addon2" id="micron-wave">
+										<div class="input-group-prepend">
+											<span class="input-group-text" >Microns (μ)</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0" aria-describedby="basic-addon2" id="micron-wave">
 									</div>
 									<hr>
 									<div class="input-group mb-3">
@@ -106,7 +109,7 @@
 											<span class="input-group-text" id="wave1" style="background-color:white;">0</span>
 										</div>
 										<div class="input-group-append">
-											<span class="input-group-text" >Wavenumbers</span>
+											<span class="input-group-text" >Wavenumber (cm<sup style="color:#495057;">-1</sup>)</span>
 										</div>
 									</div>
 								</div>
@@ -114,10 +117,14 @@
 						</div>
 						<div class="col-lg-4">
 							<div class="card">
-								<h5 class="card-header">Nanometer to Wave Number</h5>
+								<h5 class="card-header">Nanometer to Wavenumber</h5>
 								<div class="card-body">
 									<div class="input-group mb-3">
-										<input type="text" class="form-control" placeholder="Nanometer" aria-describedby="basic-addon2" id="nano-wave">
+
+										<div class="input-group-prepend">
+											<span class="input-group-text" >Nanometers (nm)</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0" aria-describedby="basic-addon2" id="nano-wave">
 									</div>
 									<hr>
 									<div class="input-group mb-3">
@@ -136,7 +143,10 @@
 								<h5 class="card-header">Wavenumber to Wavelength</h5>
 								<div class="card-body">
 									<div class="input-group mb-3">
-										<input type="text" class="form-control" placeholder="Wavenumber"  aria-describedby="wave-wave" id="wave-wave">
+										<div class="input-group-prepend">
+											<span class="input-group-text" >Wavenumber (cm<sup style="color:#495057;">-1</sup>)</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0"  aria-describedby="wave-wave" id="wave-wave">
 									</div>
 									<hr>
 									<div class="input-group mb-3">
@@ -144,7 +154,7 @@
 											<span class="input-group-text" id="wave3" style="background-color:white;">0</span>
 										</div>
 										<div class="input-group-append">
-											<span class="input-group-text" >Wavelengths</span>
+											<span class="input-group-text" >Centimeters</span>
 										</div>
 									</div>
 									<div class="input-group mb-3">
@@ -178,10 +188,18 @@
 								<h5 class="card-header">Depth of Penetration</h5>
 								<div class="card-body">
 									<div class="input-group mb-3">
-										<input type="text" class="form-control" placeholder="Effective Angle (°)"  id="eff-ang-1" aria-describedby="basic-addon2">
-										<input type="text" class="form-control" placeholder="Wavenumber" id="wavenumber1" aria-describedby="basic-addon2">
-
+										<div class="input-group-prepend">
+											<span class="input-group-text" >Effective Angle (°)</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0"  id="eff-ang-1" aria-describedby="basic-addon2">
 									</div>
+									<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text" >Wavenumber (cm<sup style="color:#495057;">-1</sup>)</span>
+									</div>
+									<input type="text" class="form-control" placeholder="0" id="wavenumber1" aria-describedby="basic-addon2">
+
+								</div>
 									<div class="input-group mb-3">
 										<div class="input-group-prepend">
 											<span class="input-group-text"  >Material</span>
@@ -201,7 +219,10 @@
 										</select>
 									</div>
 									<div class="input-group mb-3">
-										<input type="text" class="form-control" placeholder="Sample Refractive Index" id="ref-index-1" aria-describedby="basic-addon2">
+										<div class="input-group-prepend">
+											<span class="input-group-text" >Sample Refractive Index</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0" id="ref-index-1" aria-describedby="basic-addon2">
 									</div>
 									<hr>
 									<div class="input-group mb-3">
@@ -229,10 +250,16 @@
 								<h5 class="card-header">Effective Angle of Incidence for Variable Angle ATRs</h5>
 								<div class="card-body">
 									<div class="input-group mb-3">
-										<input type="text" class="form-control" placeholder="Scale Setting Angle (°)" id="scale-angle-2" aria-describedby="basic-addon2">
+										<div class="input-group-prepend">
+											<span class="input-group-text" >Scale Setting Angle (°)</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0" id="scale-angle-2" aria-describedby="basic-addon2">
 									</div>
 									<div class="input-group mb-3">
-										<input type="text" class="form-control" placeholder="Crystal Face Angle (°)" id="face-angle-2" aria-describedby="basic-addon2">
+										<div class="input-group-prepend">
+											<span class="input-group-text" >Crystal Face Angle (°)</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0" id="face-angle-2" aria-describedby="basic-addon2">
 									</div>
 									<div class="input-group mb-3">
 										<div class="input-group-prepend">
@@ -270,14 +297,23 @@
 								<h5 class="card-header">Number of Reflections for ATR Crystals</h5>
 								<div class="card-body">
 									<div class="input-group mb-3">
-										<input type="text" class="form-control" placeholder="Effective Angle (°)" id="eff-ang-3"  aria-describedby="basic-addon2">
+										<div class="input-group-prepend">
+											<span class="input-group-text" >Effective Angle (°)</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0" id="eff-ang-3"  aria-describedby="basic-addon2">
 									</div>
 									<div class="input-group mb-3">
-										<input type="text" class="form-control" placeholder="Crystal Length (mm)" id="crys-len-3" aria-describedby="basic-addon2">
+										<div class="input-group-prepend">
+											<span class="input-group-text" >Crystal Length (mm)</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0" id="crys-len-3" aria-describedby="basic-addon2">
 									</div>
 
 									<div class="input-group mb-3">
-										<input type="text" class="form-control" placeholder="Crystal Thickness (mm)" id="crys-thick-3" aria-describedby="basic-addon2">
+										<div class="input-group-prepend">
+											<span class="input-group-text" >Crystal Thickness (mm)</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0" id="crys-thick-3" aria-describedby="basic-addon2">
 									</div>
 									<hr>
 									<div class="input-group mb-3">
@@ -297,13 +333,19 @@
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="card">
-								<h5 class="card-header">Effective Pathlength for ATR Crystals</h5>
+								<h5 class="card-header">Effective Pathlength for Multi-Reflection ATR Crystals</h5>
 								<div class="card-body">
 									<div class="input-group mb-3">
-										<input type="text" class="form-control" placeholder="Number of Reflections" id="num-ref-4"  aria-describedby="basic-addon2">
+										<div class="input-group-prepend">
+											<span class="input-group-text" >Number of Reflections</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0" id="num-ref-4"  aria-describedby="basic-addon2">
 									</div>
 									<div class="input-group mb-3">
-										<input type="text" class="form-control" placeholder="Effective Depth (μ)" id="eff-depth-4" aria-describedby="basic-addon2">
+										<div class="input-group-prepend">
+											<span class="input-group-text" >Effective Depth (μ)</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0" id="eff-depth-4" aria-describedby="basic-addon2">
 									</div>
 									<hr>
 									<div class="input-group mb-3">
@@ -324,7 +366,10 @@
 								<div class="card-body">
 
 									<div class="input-group mb-3">
-										<input type="text" class="form-control" placeholder="Sample Refractive Index"  id="ref-index-5" aria-describedby="basic-addon2">
+										<div class="input-group-prepend">
+											<span class="input-group-text" >Sample Refractive Index</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0"  id="ref-index-5" aria-describedby="basic-addon2">
 									</div>
 
 									<div class="input-group mb-3">
@@ -354,25 +399,36 @@
 											<span class="input-group-text" >Critical Angle</span>
 										</div>
 									</div>
-									<a class="main_btn"  style="width:100%;color:whitesmoke;" id="submit-crit">Calculate Angle</a>
+									<a class="main_btn"  style="width:100%;color:whitesmoke;" id="submit-crit">Calculate Critical Angle</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="tab-pane fade show active" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+				<div class="tab-pane fade " id="contact" role="tabpanel" aria-labelledby="contact-tab">
 					<div class="row">
 						<div class="col-lg-4">
 							<div class="card">
 								<h5 class="card-header">Pathlength of Transmission Liquid Cell</h5>
 								<div class="card-body">
 									<div class="input-group mb-3">
-										<input type="text" class="form-control" placeholder="Wavenumber Pt 1"  id="wave-1-7" aria-describedby="basic-addon2">
-										<input type="text" class="form-control" placeholder="Wavenumber Pt 2" id="wave-2-7" aria-describedby="basic-addon2">
+										<div class="input-group-prepend">
+											<span class="input-group-text" >Wavenumber @ Point 1</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0"  id="wave-1-7" aria-describedby="basic-addon2">
+									</div>
+									<div class="input-group mb-3">
+									<div class="input-group-prepend">
+											<span class="input-group-text" >Wavenumber @ Point 2</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0" id="wave-2-7" aria-describedby="basic-addon2">
 
 									</div>
 									<div class="input-group mb-3">
-										<input type="text" class="form-control" placeholder="# of fringes between 1 and 2" id="fringe-7" aria-describedby="basic-addon2">
+										<div class="input-group-prepend">
+											<span class="input-group-text" ># of fringes between 1 and 2</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0" id="fringe-7" aria-describedby="basic-addon2">
 									</div>
 									<hr>
 									<div class="input-group mb-3">
@@ -384,27 +440,44 @@
 										</div>
 									</div>
 
-									<a class="main_btn"  style="width:100%; color:whitesmoke;" id="submit-thick-7">Calculate Depth</a>
+									<a class="main_btn"  style="width:100%; color:whitesmoke;" id="submit-thick-7">Calculate Pathlength</a>
 								</div>
 							</div>
 						</div>
 						<div class="col-lg-4">
 							<div class="card">
-								<h5 class="card-header">Thickness of Free Standing Film by Specular Reflectance</h5>
+								<h5 class="card-header">Thickness of Free Standing Film by Specular Reflection</h5>
 								<div class="card-body">
 									<div class="input-group mb-3">
-										<input type="text" class="form-control" placeholder="Wavenumber Pt 1"  id="wave-1-8" aria-describedby="basic-addon2">
-										<input type="text" class="form-control" placeholder="Wavenumber Pt 2" id="wave-2-8" aria-describedby="basic-addon2">
+										<div class="input-group-prepend">
+											<span class="input-group-text" >Wavenumber @ Point 1</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0"  id="wave-1-8" aria-describedby="basic-addon2">
+									</div>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" >Wavenumber @ Point 2</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0" id="wave-2-8" aria-describedby="basic-addon2">
 
 									</div>
 									<div class="input-group mb-3">
-										<input type="text" class="form-control" placeholder="# of fringes between 1 and 2" id="fringe-8" aria-describedby="basic-addon2">
+										<div class="input-group-prepend">
+											<span class="input-group-text" ># of fringes between 1 and 2</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0" id="fringe-8" aria-describedby="basic-addon2">
 									</div>
 									<div class="input-group mb-3">
-										<input type="text" class="form-control" placeholder="Angle of Incidence (°)" id="angle-inc-8" aria-describedby="basic-addon2">
+										<div class="input-group-prepend">
+											<span class="input-group-text" >Angle of Incidence (°)</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0" id="angle-inc-8" aria-describedby="basic-addon2">
 									</div>
 									<div class="input-group mb-3">
-										<input type="text" class="form-control" placeholder="Refractive Index of Sample" id="ref-ind-8" aria-describedby="basic-addon2">
+										<div class="input-group-prepend">
+											<span class="input-group-text" >Refractive Index of Sample</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0" id="ref-ind-8" aria-describedby="basic-addon2">
 									</div>
 									<hr>
 									<div class="input-group mb-3">
@@ -416,7 +489,7 @@
 										</div>
 									</div>
 
-									<a class="main_btn"  style="width:100%; color:whitesmoke;" id="submit-thick-8">Calculate Depth</a>
+									<a class="main_btn"  style="width:100%; color:whitesmoke;" id="submit-thick-8">Calculate Thickness</a>
 								</div>
 							</div>
 						</div>
@@ -425,15 +498,29 @@
 								<h5 class="card-header">Thickness of Free Standing Film by Transmission</h5>
 								<div class="card-body">
 									<div class="input-group mb-3">
-										<input type="text" class="form-control" placeholder="Wavenumber Pt 1"  id="wave-1-9" aria-describedby="basic-addon2">
-										<input type="text" class="form-control" placeholder="Wavenumber Pt 2" id="wave-2-9" aria-describedby="basic-addon2">
+										<div class="input-group-prepend">
+											<span class="input-group-text" >Wavenumber @ Point 1</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0"  id="wave-1-9" aria-describedby="basic-addon2">
+									</div>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" >Wavenumber @ Point 2</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0" id="wave-2-9" aria-describedby="basic-addon2">
 
 									</div>
 									<div class="input-group mb-3">
-										<input type="text" class="form-control" placeholder="# of fringes between 1 and 2" id="fringe-9" aria-describedby="basic-addon2">
+										<div class="input-group-prepend">
+											<span class="input-group-text" ># of fringes between 1 and 2</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0" id="fringe-9" aria-describedby="basic-addon2">
 									</div>
 									<div class="input-group mb-3">
-										<input type="text" class="form-control" placeholder="Refractive Index of Sample" id="ref-ind-9" aria-describedby="basic-addon2">
+										<div class="input-group-prepend">
+											<span class="input-group-text" >Refractive Index of Sample</span>
+										</div>
+										<input type="text" class="form-control" placeholder="0" id="ref-ind-9" aria-describedby="basic-addon2">
 									</div>
 									<hr>
 									<div class="input-group mb-3">
@@ -445,7 +532,7 @@
 										</div>
 									</div>
 
-									<a class="main_btn"  style="width:100%; color:whitesmoke;" id="submit-thick-9">Calculate Depth</a>
+									<a class="main_btn"  style="width:100%; color:whitesmoke;" id="submit-thick-9">Calculate Thickness</a>
 								</div>
 							</div>
 						</div>
@@ -472,43 +559,43 @@
 						<div class="col-9">
 							<div class="tab-content" id="v-pills-tabContent">
 								<div class="copy">
-								<div class="tab-pane fade show " id="v-pills-template" role="tabpanel" aria-labelledby="v-pills-home-tab">
-									<div class="card">
-										<h5 class="card-header name"></h5>
-										<div class="card-body">
-											<button type="button" class="btn" style="margin:5px;">
-												Transmission Range <span class="badge badge-light trans-range"></span>
-											</button>
-											<button type="button" class="btn" style="margin:5px;">
-												ATR Range <span class="badge badge-light atr-range"></span>
-											</button>
-											<button type="button" class="btn" style="margin:5px;">
-												Refractive Index <span class="badge badge-light ref-index"></span>
-											</button>
-											<button type="button" class="btn" style="margin:5px;">
-												Depth of Penetration <span class="badge badge-light depth-pen"></span>
-											</button>
-											<button type="button" class="btn" style="margin:5px;">
-												Water Solubility <span class="badge badge-light water"></span>
-											</button>
-											<button type="button" class="btn" style="margin:5px;">
-												Safe pH Range <span class="badge badge-light ph"></span>
-											</button>
-											<button type="button" class="btn" style="margin:5px;">
-												Temperature Limit <span class="badge badge-light temp"></span>
-											</button>
-											<button type="button" class="btn" style="margin:5px;">
-												Melting Point <span class="badge badge-light melt"></span>
-											</button>
-											<button type="button" class="btn" style="margin:5px;">
-												Hardness <span class="badge badge-light hardness"></span>
-											</button>
-											<button type="button" class="btn" style="margin:5px;">
-												Harmful Substances <span class="badge badge-light harmful"></span>
-											</button>
+									<div class="tab-pane fade show " id="v-pills-template" role="tabpanel" aria-labelledby="v-pills-home-tab">
+										<div class="card">
+											<h5 class="card-header name"></h5>
+											<div class="card-body">
+												<button type="button" class="btn" style="margin:5px;">
+													Transmission Range <span class="badge badge-light trans-range"></span>
+												</button>
+												<button type="button" class="btn" style="margin:5px;">
+													ATR Range <span class="badge badge-light atr-range"></span>
+												</button>
+												<button type="button" class="btn" style="margin:5px;">
+													Refractive Index <span class="badge badge-light ref-index"></span>
+												</button>
+												<button type="button" class="btn" style="margin:5px;">
+													Depth of Penetration <span class="badge badge-light depth-pen"></span>
+												</button>
+												<button type="button" class="btn" style="margin:5px;">
+													Water Solubility <span class="badge badge-light water"></span>
+												</button>
+												<button type="button" class="btn" style="margin:5px;">
+													Safe pH Range <span class="badge badge-light ph"></span>
+												</button>
+												<button type="button" class="btn" style="margin:5px;">
+													Temperature Limit <span class="badge badge-light temp"></span>
+												</button>
+												<button type="button" class="btn" style="margin:5px;">
+													Melting Point <span class="badge badge-light melt"></span>
+												</button>
+												<button type="button" class="btn" style="margin:5px;">
+													Hardness <span class="badge badge-light hardness"></span>
+												</button>
+												<button type="button" class="btn" style="margin:5px;">
+													Harmful Substances <span class="badge badge-light harmful"></span>
+												</button>
+											</div>
 										</div>
 									</div>
-								</div>
 								</div>
 
 							</div>
@@ -523,9 +610,16 @@
 <section class="" style="background-color:#333333; padding-top:30px; padding-bottom:20px;">
 	<div class="container" style="background-color:#333333;">
 		<div class="input-group mb-3">
-			<input type="text" class="form-control" placeholder="Number of Decimal Points" aria-label="Recipient's username" aria-describedby="button-addon2" id="dec_new">
+			<div class="input-group-prepend">
+				<span class="input-group-text">Decimal Points to Round To</span>
+			</div>
+			<input type="text" class="form-control" placeholder="4" aria-label="Recipient's username" aria-describedby="button-addon2" id="dec_new">
 			<div class="input-group-append">
 				<button class="btn btn-primary" type="button" id="update_dec">Update</button>
+			</div>
+
+			<div class="input-group-append">
+				<a class="btn btn-default btn-info"  style="width:100%; color:whitesmoke;" href="index.html">Reset Page</a>
 			</div>
 		</div>
 	</div>
