@@ -2456,12 +2456,12 @@ h6 {
   display: inline-block;
   background-image: linear-gradient(to right, #4dabff 0%, #62ddff 48%, #4dabff 100%);
   background-size: 200% auto;
-  padding: 0px 35px;
+  padding: 7px 20px;
   color: #fff;
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
   font-weight: 900;
-  line-height: 50px;
+  line-height: 35px;
   border-radius: 5px;
   outline: none !important;
   box-shadow: none !important;
