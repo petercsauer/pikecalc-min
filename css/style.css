@@ -157,7 +157,7 @@ button:focus {
     .header_area .navbar .nav .nav-item {
       margin-right: 45px; }
       .header_area .navbar .nav .nav-item .nav-link {
-        font: 500 12px/100px "Roboto", sans-serif;
+        font: 900 13px/100px "Open Sans", sans-serif;
         text-transform: uppercase;
         color: #fff;
         padding: 0px;
@@ -2458,15 +2458,16 @@ h6 {
   background-size: 200% auto;
   padding: 0px 35px;
   color: #fff;
-  font-family: "Roboto", sans-serif;
-  font-size: 13px;
-  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 900;
   line-height: 50px;
   border-radius: 5px;
   outline: none !important;
   box-shadow: none !important;
   text-align: center;
   cursor: pointer;
+  text-transform: uppercase;
   transition: all 300ms linear 0s; }
   .main_btn:hover {
     background-position: right center;
@@ -2693,9 +2694,9 @@ h6 {
       text-align: center;
       line-height: 60px;
       border-radius: 5px;
-      font-size: 13px;
-      font-family: "Roboto", sans-serif;
-      font-weight: 500;
+      font-size: 15px;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 900;
       text-transform: uppercase;
       color: #222222; }
       .made_life_inner .nav.nav-tabs li a.active {
@@ -3022,6 +3023,13 @@ h6 {
   margin-top: 60px; }
   .copy_right_text p a {
     color: #3bacf0; }
+
+  .badge{
+    float:right;
+  }
+  .btn{
+    text-align: left !important;
+  }
 
 /* End Footer Area css
 ============================================================================================ */
